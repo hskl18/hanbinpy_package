@@ -1,6 +1,7 @@
 # My PyPI Package Project
 
 A sample project to create a Python package and publish it to PyPI.
+https://pypi.org/project/hanbin-hello/
 
 Credit to https://www.youtube.com/watch?v=Kz6IlDCyOUY
 
@@ -47,36 +48,19 @@ Before publishing your Python package, it's crucial to test it locally to ensure
 3. Run the following command to install your package locally.
 
 ```bash
-pip install dist/pixegami_hello-0.1-py3-none-any.whl
+pip install dist/xxx.whl
 ```
 
 Replace the package name with the actual name and version of your package. Once the installation is complete, you can now test your package by importing it in a Python script or interactive session and using its functionality.
 
 ```python
 # In a different file...
-from pixegami_hello import hello
+from hanbin_hello import hello
 
-hello() # Hello from Pixegami!
+hello()
 ```
-
 By testing your package locally, you can identify and fix any issues before publishing it to PyPI.
 
-## Add a CLI Command
-
-If you want to turn this package into a command line interface (or CLI application), you can also do that.
-
-In the `setup.py` file, you can specify entry points for your package, which lets you a command name to any function inside your package. And running that command will run that function.
-
-```python
-setup(
-    ...
-    entry_points={
-        "console_scripts": [
-            "pixegami-hello = pixegami_hello:hello",
-        ],
-    },
-)
-```
 
 ## Publish to PyPI
 
@@ -89,7 +73,7 @@ twine upload dist/*
 You will be prompted for your PyPI credentials. Once uploaded, anyone can install your package using.
 
 ```bash
-pip install pixegami-hello
+pip install hanbin_hello
 ```
 
 ## Useful Links
